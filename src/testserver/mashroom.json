@@ -1,0 +1,19 @@
+{
+  "$schema": "https://www.mashroom-server.com/schemas/mashroom-server-config.json",
+  "name": "Mashroom GraphQL Test Server 1",
+  "port": 5050,
+  "enableHttp2": false,
+  "externalPluginConfigFileNames": ["mashroom"],
+  "pluginPackageFolders": [
+    {
+      "path": "../..",
+      "devMode": true
+    }, {
+      "path": "./packages",
+      "devMode": true
+    }
+  ],
+  "plugins": {
+
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://www.mashroom-server.com/schemas/mashroom-plugins.json",
+  "devModeBuildScript": "build",
+  "plugins": [
+    {
+      "name": "Mashroom GraphQL Echo Plugin",
+      "type": "mashroom-graphql-plugin",
+      "bootstrap": "./dist/bootstrap.js",
+      "defaultConfig": {
+        "pubSub": "memory"
+      }
+    }
+  ]
+}

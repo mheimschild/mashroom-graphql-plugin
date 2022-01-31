@@ -1,0 +1,14 @@
+{
+  "$schema": "https://www.mashroom-server.com/schemas/mashroom-plugins.json",
+  "devModeBuildScript": "build",
+  "plugins": [
+    {
+      "name": "Mashroom GraphQL Plugin Loader",
+      "type": "plugin-loader",
+      "loads": "mashroom-graphql-plugin",
+      "bootstrap": "./dist/loader/loader-bootstrap.js",
+      "defaultConfig": {
+      }
+    }
+  ]
+}
