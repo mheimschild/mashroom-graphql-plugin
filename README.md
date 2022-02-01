@@ -4,6 +4,44 @@ This plugin adds possibility to define GraphQL service in Mashroom.
 
 It bootstraps Apollo Server using Mashroom internal express application. Subscriptions are supported over Web Sockets.
 
+## Schema stitching
+
+You can have multiple GraphQL Plugins registered on your server.
+Schemas from different plugins are stitched together as described here [schema stitching](https://www.graphql-tools.com/docs/schema-stitching/stitch-combining-schemas)
+
+## Example
+
+To start demo server run
+
+   npm i
+   npm run dev
+
+and open [localhost:3005/graphql](http://localhost:3005/graphql) in your browser
+
+You can subscribe to change using
+
+```
+subscription Subscription {
+  personCreated {
+    id
+  }
+}
+```
+
+and produce new object running this query
+
+```
+query Test($createPersonId: ID!) {
+  createPerson(id: $createPersonId) {
+    id
+  }
+}
+```
+
+after 1500ms delay you should see activity in subscription window
+
+![img.png](doc/graphql-ui.png)
+
 ## Writing GraphQL Plugins for Mashroom Server
 
 Plugin has to have definition like the example bellow
