@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import { mashroomServerContextFactory } from '@mashroom/mashroom';
-import startGraphQLServer from "../webapp/server";
+import startGraphQLServer from "../graphql/server";
 
 (async () => {
   const stopping = false;
