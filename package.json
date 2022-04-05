@@ -1,7 +1,7 @@
 {
   "name": "mashroom-graphql-plugin",
   "version": "1.0.0",
-  "description": "Plugin adding GraphQL functionality for Mashroom Server",
+  "description": "Plugin adding GraphQL functionality for Mashroom Server (mashroom-server.com)",
   "main": "index.js",
   "scripts": {
     "build": "swc ./src/** -d ./dist",
