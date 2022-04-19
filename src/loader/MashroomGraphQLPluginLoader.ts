@@ -34,13 +34,13 @@ class MashroomGraphQLPluginLoader implements MashroomPluginLoader {
 
     this._logger.info(`Registering GraphQL plugin: ${plugin.name}`);
 
-    this._schemaRegistry.register(plugin.name, graphQLPlugin);
+    await this._schemaRegistry.register(plugin.name, graphQLPlugin);
   }
 
-  unload(plugin: MashroomPlugin): Promise<void> {
+  async unload(plugin: MashroomPlugin): Promise<void> {
     this._logger.info(`Unregistering GraphQL plugin: ${plugin.name}`);
 
-    this._schemaRegistry.unregister(plugin.name);
+    await this._schemaRegistry.unregister(plugin.name);
 
     return Promise.resolve(undefined);
   }

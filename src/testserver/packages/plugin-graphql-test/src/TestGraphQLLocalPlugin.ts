@@ -1,13 +1,11 @@
-import {MashroomGraphQLPlugin} from "../../../../type-definitions";
+import {MashroomLocalGraphQLPlugin} from "../../../../type-definitions";
 import {IResolvers} from "@graphql-tools/utils";
 import {DocumentNode} from "graphql";
 import {gql} from "apollo-server-core";
 import {PubSubEngine} from "graphql-subscriptions";
 
-class TestGraphQLPlugin implements MashroomGraphQLPlugin {
-  constructor(private _pubSub: PubSubEngine) {
-  }
-
+class TestGraphQLLocalPlugin implements MashroomLocalGraphQLPlugin {
+  constructor(private _pubSub: PubSubEngine) {}
 
   getSchema(): DocumentNode | Array<DocumentNode> | string | Array<string> {
     return gql`
@@ -63,4 +61,4 @@ class TestGraphQLPlugin implements MashroomGraphQLPlugin {
   }
 }
 
-export default TestGraphQLPlugin;
+export default TestGraphQLLocalPlugin;

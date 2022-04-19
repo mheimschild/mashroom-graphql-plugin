@@ -32,6 +32,7 @@
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.135",
     "@types/minimist": "^1.2.2",
+    "@types/node-fetch": "^2.6.1",
     "@types/ws": "^8.5.3",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
@@ -44,6 +45,7 @@
   "dependencies": {
     "@graphql-tools/schema": "^8.3.1",
     "@graphql-tools/stitch": "^8.4.3",
+    "@graphql-tools/wrap": "^8.4.15",
     "@mashroom/mashroom": "^1.9.4",
     "apollo-server-core": "^3.6.2",
     "apollo-server-express": "^3.6.2",
@@ -52,6 +54,7 @@
     "graphql-redis-subscriptions": "^2.4.2",
     "graphql-subscriptions": "^2.0.0",
     "ioredis": "^4.28.3",
+    "node-fetch": "^2.6.7",
     "subscriptions-transport-ws": "^0.11.0"
   }
 }

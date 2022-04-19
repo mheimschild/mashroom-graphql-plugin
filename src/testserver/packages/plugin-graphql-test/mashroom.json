@@ -3,9 +3,17 @@
   "devModeBuildScript": "build",
   "plugins": [
     {
-      "name": "Mashroom GraphQL Echo Plugin",
+      "name": "Mashroom GraphQL Local Echo Plugin",
       "type": "mashroom-graphql-plugin",
-      "bootstrap": "./dist/bootstrap.js",
+      "bootstrap": "./dist/bootstrap_local.js",
+      "defaultConfig": {
+        "pubSub": "memory"
+      }
+    },
+    {
+      "name": "Mashroom GraphQL Remote Echo Plugin",
+      "type": "mashroom-graphql-plugin",
+      "bootstrap": "./dist/bootstrap_remote.js",
       "defaultConfig": {
         "pubSub": "memory"
       }

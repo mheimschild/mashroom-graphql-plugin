@@ -1,8 +1,8 @@
 import {MashroomGraphQLPluginBootstrapFunction} from "../../../../type-definitions";
-import TestGraphQLPlugin from "./TestGraphQLPlugin";
+import TestGraphQLLocalPlugin from "./TestGraphQLLocalPlugin";
 
 const bootstrap: MashroomGraphQLPluginBootstrapFunction = (pluginName, config, contextHolder, pubSub) => {
-  return Promise.resolve(new TestGraphQLPlugin(pubSub));
+  return Promise.resolve(new TestGraphQLLocalPlugin(pubSub));
 }
 
 export default bootstrap;
