@@ -2,13 +2,13 @@
   "name": "mashroom-graphql-plugin",
   "version": "1.0.0",
   "description": "Plugin adding GraphQL functionality for Mashroom Server (mashroom-server.com)",
-  "main": "index.js",
   "scripts": {
     "build": "swc ./src/** -d ./dist",
     "lint": "eslint ./src --ext .ts",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc",
     "dev": "nodemon --ext ts --exec \"npm run build && node dist/testserver/starter.js\"",
-    "test": "test"
+    "test": "test",
+    "prepublishOnly": "npm run lint && npm run type-check && npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
     "dist/**",
     "mashroom.json"
   ],
+  "types": "./dist/type-definitions/index.d.ts",
   "keywords": [
     "GraphQL",
     "Plugin",
@@ -30,6 +31,7 @@
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.135",
     "@types/minimist": "^1.2.2",
+    "@types/ws": "^8.5.3",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "apollo-server-plugin-base": "^3.5.1",
