@@ -12,3 +12,5 @@ export interface MashroomGraphQLPlugin {
 export type PubSubType = 'memory' | 'redis';
 
 export type MashroomGraphQLPluginBootstrapFunction = (pluginName: string, config: MashroomPluginConfig, contextHolder: MashroomPluginContextHolder, pubSub: PubSubEngine) => Promise<MashroomGraphQLPlugin>;
+
+export * from '../api';
