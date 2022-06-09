@@ -10,10 +10,7 @@
     "test": "test",
     "prepublishOnly": "npm run lint && npm run type-check && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com:mheimschild/mashroom-graphql-plugin.git"
-  },
+  "repository": "github:mheimschild/mashroom-graphql-plugin",
   "main": "./dist/api.js",
   "files": [
     "dist/**",
