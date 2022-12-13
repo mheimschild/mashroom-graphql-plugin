@@ -6,11 +6,11 @@ import startGraphQLServer from "../graphql/server";
   const stopping = false;
 
   await (async () => {
-    const { server, expressApp } = await mashroomServerContextFactory(resolve('src', 'testserver'));
+    const { server, expressApp, loggerFactory } = await mashroomServerContextFactory(resolve('src', 'testserver'));
 
     await server.start();
 
-    await startGraphQLServer(server._httpServer, expressApp);
+    await startGraphQLServer(server._httpServer, expressApp, loggerFactory);
 
   })();
 

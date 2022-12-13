@@ -1,8 +1,12 @@
-# Mashroom GraphQL Plugin
+# Mashroom GraphQL Plugin Loader
 
-This plugin adds possibility to define GraphQL service in Mashroom.
+This plugin adds possibility to define GraphQL services in [Mashroom](https://www.mashroom-server.com/).
 
-It bootstraps Apollo Server using Mashroom internal express application. Subscriptions are supported over Web Sockets.
+Additionally - it bootstraps Apollo Server using Mashroom internal express application. Subscriptions are supported over Web Sockets.
+
+## Installation
+
+    npm i -S mashroom-graphql-server
 
 ## Schema stitching
 
@@ -16,7 +20,7 @@ To start demo server run
    npm i
    npm run dev
 
-and open [localhost:3005/graphql](http://localhost:3005/graphql) in your browser
+and open [localhost:5050/graphql](http://localhost:5050/graphql) in your browser
 
 You can subscribe to change using
 

@@ -26,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "@graphql-tools/utils": "^8.6.1",
+    "@mashroom/mashroom": "^2.2.1",
     "@swc/cli": "^0.1.55",
     "@swc/core": "^1.2.135",
     "@types/minimist": "^1.2.2",
@@ -43,7 +44,6 @@
     "@graphql-tools/schema": "^8.3.1",
     "@graphql-tools/stitch": "^8.4.3",
     "@graphql-tools/wrap": "^8.4.15",
-    "@mashroom/mashroom": "^1.9.4",
     "apollo-server-core": "^3.6.2",
     "apollo-server-express": "^3.6.2",
     "express": "^4.17.2",

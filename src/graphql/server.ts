@@ -5,6 +5,7 @@ import {ApolloServerPluginDrainHttpServer} from "apollo-server-core";
 import * as http from "http";
 import {SubscriptionServer} from "subscriptions-transport-ws";
 import {execute, subscribe} from "graphql";
+import type {MashroomLoggerFactory} from "@mashroom/mashroom/type-definitions";
 
 /**
  * Creates and starts Apollo Server
@@ -12,7 +13,8 @@ import {execute, subscribe} from "graphql";
  * @param app
  * @param preserveUpgradeHandler set to true if you want to preserve upgrade handler created by Mashroom. Be sure there is one, otherwise subscription wouldn't work
  */
-const startGraphQLServer = async (httpServer: http.Server, app: Express, preserveUpgradeHandler = false) => {
+const startGraphQLServer = async (httpServer: http.Server, app: Express, loggerFactory: MashroomLoggerFactory, preserveUpgradeHandler = false) => {
+  const logger = loggerFactory('mashroom.server.graphql');
   const stitchedSchema = schemaRegistry.getStitchedSchema();
 
   if (!preserveUpgradeHandler) {
@@ -58,7 +60,7 @@ const startGraphQLServer = async (httpServer: http.Server, app: Express, preserv
   apolloServer.applyMiddleware({ app });
 
   schemaRegistry.addChangeListener(() => {
-    console.log('schema update due to change');
+    logger.info('schema update due to change');
     const openApolloServer = (apolloServer as any);
     const openSubscriptionServer = (subscriptionServer as any);
     const newSchema = schemaRegistry.getStitchedSchema();
